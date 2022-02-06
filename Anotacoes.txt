@@ -1,0 +1,31 @@
+## Rodando Docker ###
+** docker --help **
+1) criando container
+->  docker run --name postgres -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres
+
+2) rodando imagem
+-> docker start <nome_image>
+
+
+
+## TypeOrm ##
+# comando para criar a migration, com flag para informar o nome da migration
+-> yarn typeorm migration:create -n CreateProducts
+
+# comando para rodar a migration que criamos
+-> yarn typeorm migration:run
+
+
+# ordem de criação - arquiterura
+1- migration
+2- modules
+3- entities
+4- repositories
+5- services
+6- controllers
+7- routes
+
+
+
+## Insomnia ##
+-> ctrl + space = para visualisazar as variaveis de ambiente
