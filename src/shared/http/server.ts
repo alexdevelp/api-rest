@@ -7,13 +7,14 @@ import AppError from '@shared/errors/AppError';
 import '@shared/typeorm';
 import { errors } from 'celebrate';
 import morgan from 'morgan';
+import upload from '@config/upload';
 
 const app = express();
 
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
-
+app.use('/files', express.static(upload.directory));
 app.use(routes);
 app.use(errors());
 
