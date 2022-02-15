@@ -15,9 +15,14 @@
 # comando para rodar a migration que criamos
 -> yarn typeorm migration:run
 
+# comando de migration para adicionar uma coluna
+-> yarn typeorm migration:create -n AddCustomerIdToOrders
+
+# comando para acicionar uma chave estrangeira
+
 
 # ordem de criação - arquiterura
-1- migration
+1- migration (create | run)
 2- modules
 3- entities
 4- repositories

@@ -3,13 +3,12 @@ import HandlebarsMailTemplate from './HandlebarsMailTemplate';
 
 interface ITemplateVariable {
   [key: string]: number | string;
-
 }
 
-// interface IParseMailTemplate {
-//   template: string;
-//   variables: ITemplateVariable;
-// }
+interface IParseMailTemplate {
+  file: string;
+  variables: ITemplateVariable;
+}
 
 interface IMailContact {
   name: string;
@@ -20,7 +19,7 @@ interface ISendMail {
   to: IMailContact;
   from?: IMailContact;
   subject: string;
-  templateData: ITemplateVariable;
+  templateData: IParseMailTemplate;
 }
 
 export default class EtherealMail {
