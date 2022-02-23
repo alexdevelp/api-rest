@@ -7,6 +7,6 @@ temp/
 converage
 ormconfig.json
 dist
-
+.env
 uploads/*
 !uploads/.gitkeep

@@ -34,8 +34,10 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "celebrate": "^15.0.0",
+    "class-transformer": "^0.5.1",
     "cors": "^2.8.5",
     "date-fns": "^2.28.0",
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "express-async-errors": "^3.1.1",
     "handlebars": "^4.7.7",
