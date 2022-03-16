@@ -30,7 +30,17 @@
 6- controllers
 7- routes
 
+## Redis - Cache ##
+-> docker exec -it redis sh
+-> redis-cli
+-> set teste testando
+-> get teste
+-> del "para deletar dado, informar chave ou array de chave"
 
+# comando para criar uma aplicação web para consulta do Cache, vai criar no localhost da maquina: http://localhost:8001
+-> docker run --name redis-client -v redisinsight:/db -p 8001:8001 -d -t redislabs/redisinsight:latest
 
 ## Insomnia ##
 -> ctrl + space = para visualisazar as variaveis de ambiente
+
+
