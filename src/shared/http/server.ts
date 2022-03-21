@@ -10,12 +10,14 @@ import { errors } from 'celebrate';
 import morgan from 'morgan';
 import upload from '@config/upload';
 import { pagination } from 'typeorm-pagination';
+import rateLimiter from '@shared/http/middlewares/rateLimiter';
 
 const app = express();
 
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(rateLimiter);
 app.use(pagination);
 app.use('/files', express.static(upload.directory));
 app.use(routes);
